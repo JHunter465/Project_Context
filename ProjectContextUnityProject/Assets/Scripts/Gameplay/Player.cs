@@ -14,6 +14,15 @@ public class Player : MonoBehaviour
 
     [SerializeField] GameObject renderParent;
 
+    private Vector3 startingPosition;
+
+    Coroutine moveRoutine;
+
+    private void Awake()
+    {
+        startingPosition = transform.position;
+    }
+
     private void Update()
     {
         //We do nothing if the player is still moving.
@@ -36,6 +45,13 @@ public class Player : MonoBehaviour
             ChangeRotation(horizontal, vertical);
             Move(horizontal, vertical);
         }
+    }
+
+    public void TeleportToStart()
+    {
+        transform.position = startingPosition;
+        if(moveRoutine != null) StopCoroutine(moveRoutine);
+        isMoving = false;
     }
 
     private void ChangeRotation(int xDir, int yDir)
@@ -67,17 +83,29 @@ public class Player : MonoBehaviour
         if (!hasObstacleTile)
         {
             if (doorCheck(targetCell))
-                StartCoroutine(SmoothMovement(targetCell));
+                StartSmoothMovementRoutine(targetCell);
             else
-                StartCoroutine(BlockedMovement(targetCell));
+                StartBlockedMovementRoutine(targetCell);
         }
 
         else
-            StartCoroutine(BlockedMovement(targetCell));
+            StartBlockedMovementRoutine(targetCell);
 
         if (!isMoving)
-            StartCoroutine(BlockedMovement(targetCell));
+            StartBlockedMovementRoutine(targetCell);
 
+    }
+
+    void StartSmoothMovementRoutine(Vector3 end)
+    {
+        if (moveRoutine != null) StopCoroutine(moveRoutine);
+        moveRoutine = StartCoroutine(SmoothMovement(end));
+    }
+
+    void StartBlockedMovementRoutine(Vector3 end)
+    {
+        if (moveRoutine != null) StopCoroutine(moveRoutine);
+        moveRoutine = StartCoroutine(BlockedMovement(end));
     }
 
     private IEnumerator actionCooldown(float cooldown)
