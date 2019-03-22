@@ -1,0 +1,12 @@
+[title=Cutscene_1_begin]
+"Mattie":Hallo ik ben blank.
+"Mattie":[question=TypeyourquestionIDhere]Nu heb ik een gezicht. Zin in seks?
+[choice]Ja neef[newtalk start=FollowUp_Cutscene_1_Choice_0_begin break=FollowUp_Cutscene_1_Choice_0_end]
+[choice]Mooi niet[newtalk start=FollowUp_Cutscene_1_Choice_1_begin break=FollowUp_Cutscene_1_Choice_1_end]
+[title=Cutscene_1_end]
+[title=FollowUp_Cutscene_1_Choice_1_begin]
+"Mattie":Jammer want ik ben eigenlijk een mokkel
+[title=FollowUp_Cutscene_1_Choice_1_end]
+[title=FollowUp_Cutscene_1_Choice_0_begin]
+"Mattie":Kom maar makker
+[title=FollowUp_Cutscene_1_Choice_0_end]
