@@ -4457,6 +4457,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: fdd057fa003d5ed4ba79c87b6a4f5a99,
         type: 3}
+    - target: {fileID: 6147201154705305583, guid: 0b81add8055a7d34d80fbe70067a1846,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0030731708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147201154705305583, guid: 0b81add8055a7d34d80fbe70067a1846,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147201154705305583, guid: 0b81add8055a7d34d80fbe70067a1846,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147201154705305583, guid: 0b81add8055a7d34d80fbe70067a1846,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.24068281
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b81add8055a7d34d80fbe70067a1846, type: 3}
 --- !u!114 &1078738075 stripped
@@ -4770,7 +4790,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1905917877}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1611638098
 PrefabInstance:
