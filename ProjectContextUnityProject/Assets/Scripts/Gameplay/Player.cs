@@ -10,7 +10,9 @@ public class Player : MonoBehaviour
 
     public bool isMoving = false;
     public bool onCooldown = false;
-    private float moveTime = 0.1f;
+    public float moveTime = 0.2f;
+
+    [SerializeField] GameObject renderParent;
 
     private void Update()
     {
@@ -31,8 +33,23 @@ public class Player : MonoBehaviour
         if (horizontal != 0 || vertical != 0)
         {
             StartCoroutine(actionCooldown(0.1f));
+            ChangeRotation(horizontal, vertical);
             Move(horizontal, vertical);
         }
+    }
+
+    private void ChangeRotation(int xDir, int yDir)
+    {
+        Debug.Log("Rotating");
+
+        if (xDir < 0)
+            renderParent.transform.localRotation = Quaternion.Euler(Vector3.forward * 90);
+        else if (xDir > 0)
+            renderParent.transform.localRotation = Quaternion.Euler(Vector3.forward * 270);
+        else if (yDir < 0)
+            renderParent.transform.localRotation = Quaternion.Euler(Vector3.forward * 180);
+        else if (yDir > 0)
+            renderParent.transform.localRotation = Quaternion.Euler(Vector3.zero);
     }
 
     private void Move(int xDir, int yDir)
