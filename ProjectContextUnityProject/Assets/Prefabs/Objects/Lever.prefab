@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300040, guid: 8e8bdb7369139c549847264cde0f0799, type: 3}
+  m_Sprite: {fileID: 21300120, guid: 17ff07b3d80274a4faf219496e648e0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,8 +96,8 @@ MonoBehaviour:
   isPulled: 0
   doorList:
   - {fileID: 0}
-  leverOn: {fileID: 21300050, guid: 8e8bdb7369139c549847264cde0f0799, type: 3}
-  leverOff: {fileID: 21300040, guid: 8e8bdb7369139c549847264cde0f0799, type: 3}
+  leverOn: {fileID: 21300122, guid: 17ff07b3d80274a4faf219496e648e0e, type: 3}
+  leverOff: {fileID: 21300120, guid: 17ff07b3d80274a4faf219496e648e0e, type: 3}
 --- !u!61 &1276339020015435254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 0.5625}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.13, y: 0.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
