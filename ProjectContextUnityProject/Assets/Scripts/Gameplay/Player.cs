@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public Tilemap floorTilemap;
     public Tilemap wallTilemap;
+    public Tilemap slipperyTilemap;
 
     public bool isMoving = false;
     public bool onCooldown = false;
@@ -77,13 +78,14 @@ public class Player : MonoBehaviour
         bool isOnGround = getCell(floorTilemap, startCell) != null; //If the player is on the ground
         bool hasGroundTile = getCell(floorTilemap, targetCell) != null; //If target Tile has a ground
         bool hasObstacleTile = getCell(wallTilemap, targetCell) != null; //if target Tile has an obstacle
+        bool hasSlipperyTile = getCell(slipperyTilemap, targetCell) != null; //if target Tile is slippery
 
 
         //If the front tile is a walkable ground tile, the player moves here.
         if (!hasObstacleTile)
         {
             if (doorCheck(targetCell))
-                StartSmoothMovementRoutine(targetCell);
+                StartSmoothMovementRoutine(targetCell, hasSlipperyTile);
             else
                 StartBlockedMovementRoutine(targetCell);
         }
@@ -96,10 +98,10 @@ public class Player : MonoBehaviour
 
     }
 
-    void StartSmoothMovementRoutine(Vector3 end)
+    void StartSmoothMovementRoutine(Vector3 end, bool isSlippery = false)
     {
         if (moveRoutine != null) StopCoroutine(moveRoutine);
-        moveRoutine = StartCoroutine(SmoothMovement(end));
+        moveRoutine = StartCoroutine(SmoothMovement(end, isSlippery));
     }
 
     void StartBlockedMovementRoutine(Vector3 end)
@@ -122,9 +124,11 @@ public class Player : MonoBehaviour
         onCooldown = false;
     }
 
-    private IEnumerator SmoothMovement(Vector3 end)
+    private IEnumerator SmoothMovement(Vector3 end, bool isSlippery = false)
     {
         //while (isMoving) yield return null;
+
+        Vector3 _start = transform.position;
 
         isMoving = true;
 
@@ -151,6 +155,12 @@ public class Player : MonoBehaviour
         //    walkingSound.loop = false;
 
         isMoving = false;
+
+        if (isSlippery)
+        {
+            Vector3 _newPos = end - _start;
+            Move((int)_newPos.x, (int)_newPos.y);
+        }
     }
 
     //Blocked animation

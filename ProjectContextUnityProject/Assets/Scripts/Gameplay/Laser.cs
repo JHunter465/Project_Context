@@ -51,7 +51,6 @@ public class Laser : MonoBehaviour
 
     public void RotateLaser(bool _clockWise = true)
     {
-        Debug.Log("ROTATE OUWE");
         isRotating = true;
         StartRotationRoutine();
         // int rotvalue = _clockWise ? -90 : 90;
