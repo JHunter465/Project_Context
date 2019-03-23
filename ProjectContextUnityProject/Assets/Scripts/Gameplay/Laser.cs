@@ -10,6 +10,9 @@ public class Laser : MonoBehaviour
     public float RotationDuration = 0.2f;
     public float RotationAngle = 90;
 
+    public float timeBetweenTurn = 5;
+    float turnTimer;
+
     public AnimationCurve RotationCurve;
     Coroutine rotationRoutine;
 
@@ -21,6 +24,7 @@ public class Laser : MonoBehaviour
     {
         originalEulerAngles = transform.localEulerAngles;
         lineRenderer = gameObject.GetComponent<LineRenderer>();
+        turnTimer = timeBetweenTurn;
     }
 
     private void Update()
@@ -28,8 +32,21 @@ public class Laser : MonoBehaviour
         if (IsOn)
             BeamLaser();
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isRotating)
+        //if (Input.GetKeyDown(KeyCode.Space) && !isRotating)
+        //    RotateLaser();
+
+        HandleTimeBasedTurns();
+    }
+
+    void HandleTimeBasedTurns()
+    {
+        if (turnTimer < 0)
+        {
             RotateLaser();
+            turnTimer = timeBetweenTurn;
+        }
+        else
+            turnTimer -= Time.deltaTime;
     }
 
     public void RotateLaser(bool _clockWise = true)
@@ -62,7 +79,7 @@ public class Laser : MonoBehaviour
 
         bool _flip = false;
 
-        if (transform.localEulerAngles != originalEulerAngles)
+        if (PingPongRotation && transform.localEulerAngles != originalEulerAngles)
             _flip = true;
 
         float _tweenTime = 0;
