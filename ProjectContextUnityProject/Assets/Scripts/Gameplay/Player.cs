@@ -57,8 +57,6 @@ public class Player : MonoBehaviour
 
     private void ChangeRotation(int xDir, int yDir)
     {
-        Debug.Log("Rotating");
-
         if (xDir < 0)
             renderParent.transform.localRotation = Quaternion.Euler(Vector3.forward * 90);
         else if (xDir > 0)
@@ -84,7 +82,7 @@ public class Player : MonoBehaviour
         //If the front tile is a walkable ground tile, the player moves here.
         if (!hasObstacleTile)
         {
-            if (doorCheck(targetCell))
+            if (objectCheck(targetCell))
                 StartSmoothMovementRoutine(targetCell, hasSlipperyTile);
             else
                 StartBlockedMovementRoutine(targetCell);
@@ -208,7 +206,7 @@ public class Player : MonoBehaviour
         isMoving = false;
     }
 
-    private bool doorCheck(Vector2 targetCell)
+    private bool objectCheck(Vector2 targetCell)
     {
         Collider2D coll = whatsThere(targetCell);
 
@@ -240,6 +238,12 @@ public class Player : MonoBehaviour
             Lever lever = coll.gameObject.GetComponent<Lever>();
             lever.operate();
             //We operate the lever, but can't move there, so we return false;
+            return false;
+        }
+        else if (coll.tag == "WallButton")
+        {
+            Vector2 _dir = targetCell - new Vector2(transform.position.x, transform.position.y);
+            coll.GetComponent<WallButton>().InteractWithButton(_dir);
             return false;
         }
         else
