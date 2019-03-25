@@ -3859,6 +3859,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1074311767}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1125049548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1535160331, guid: 450c142a9b4ee5344a22bdf19198d65d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1905917876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1125049551
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125049548}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ee372aeafb47ba34eb12b9279f2ba52f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1155310499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6544,6 +6569,26 @@ PrefabInstance:
     - target: {fileID: 1727610426, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
       propertyPath: m_SortingOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535160332, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535160332, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535160332, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535160332, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535160332, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
