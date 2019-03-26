@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Tilemap slipperyTilemap;
 
     public bool isMoving = false;
+    public bool isSliding = false;
     public bool onCooldown = false;
     public float moveTime = 0.2f;
 
@@ -54,13 +55,18 @@ public class Player : MonoBehaviour
         transform.position = startingPosition;
         if (moveRoutine != null) StopCoroutine(moveRoutine);
         isMoving = false;
+        isSliding = false;
         UpdateAnimations();
     }
 
     void UpdateAnimations()
     {
         if (shoulderAnimator != null)
+        {
             shoulderAnimator.SetBool("IsMoving", isMoving);
+            shoulderAnimator.SetBool("IsSliding", isSliding);
+        }
+
     }
 
     private void ChangeRotation(int xDir, int yDir)
@@ -137,6 +143,7 @@ public class Player : MonoBehaviour
         Vector3 _start = transform.position;
 
         isMoving = true;
+        isSliding = isSlippery;
         UpdateAnimations();
 
         //Play movement sound
@@ -162,6 +169,7 @@ public class Player : MonoBehaviour
         //    walkingSound.loop = false;
 
         isMoving = false;
+        isSliding = false;
         UpdateAnimations();
 
         if (isSlippery)
