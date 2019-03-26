@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5421557761827329512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.53, y: 0.59, z: -0.76}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300100, guid: 17ff07b3d80274a4faf219496e648e0e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9440c688819db604dafee8ac9f267a7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   PingPongRotation: 1
   RotationDuration: 1
   RotationAngle: 90
+  timeBetweenTurn: 5
   RotationCurve:
     serializedVersion: 2
     m_Curve:
