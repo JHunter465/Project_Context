@@ -107,8 +107,8 @@ public class Laser : MonoBehaviour
 
     void BeamLaser()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right);
-        Debug.DrawRay(transform.position, transform.right);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + (-transform.up / 4), -transform.up);
+        Debug.DrawRay(transform.position + (-transform.up/ 4), -transform.up);
 
         if (hit.collider != null)
         {
@@ -125,7 +125,7 @@ public class Laser : MonoBehaviour
                 }
             }
 
-            Vector3 _posA = new Vector3(transform.position.x, transform.position.y, -1);
+            Vector3 _posA = new Vector3(transform.position.x, transform.position.y, -1) + (-transform.up / 4);
             Vector3 _posB = new Vector3(hit.point.x, hit.point.y, -1);
 
             lineRenderer.SetPosition(0, _posA);

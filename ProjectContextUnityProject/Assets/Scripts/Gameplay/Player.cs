@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float moveTime = 0.2f;
 
     [SerializeField] GameObject renderParent;
+    [SerializeField] Animator shoulderAnimator;
 
     private Vector3 startingPosition;
 
@@ -51,8 +52,15 @@ public class Player : MonoBehaviour
     public void TeleportToStart()
     {
         transform.position = startingPosition;
-        if(moveRoutine != null) StopCoroutine(moveRoutine);
+        if (moveRoutine != null) StopCoroutine(moveRoutine);
         isMoving = false;
+        UpdateAnimations();
+    }
+
+    void UpdateAnimations()
+    {
+        if (shoulderAnimator != null)
+            shoulderAnimator.SetBool("IsMoving", isMoving);
     }
 
     private void ChangeRotation(int xDir, int yDir)
@@ -88,11 +96,11 @@ public class Player : MonoBehaviour
                 StartBlockedMovementRoutine(targetCell);
         }
 
-        else
-            StartBlockedMovementRoutine(targetCell);
+        //else
+        //StartBlockedMovementRoutine(targetCell);
 
-        if (!isMoving)
-            StartBlockedMovementRoutine(targetCell);
+        //if (!isMoving)
+        //tartBlockedMovementRoutine(targetCell);
 
     }
 
@@ -129,6 +137,7 @@ public class Player : MonoBehaviour
         Vector3 _start = transform.position;
 
         isMoving = true;
+        UpdateAnimations();
 
         //Play movement sound
         //if (walkingSound != null)
@@ -153,6 +162,7 @@ public class Player : MonoBehaviour
         //    walkingSound.loop = false;
 
         isMoving = false;
+        UpdateAnimations();
 
         if (isSlippery)
         {
@@ -167,7 +177,7 @@ public class Player : MonoBehaviour
         //while (isMoving) yield return null;
 
         isMoving = true;
-
+        UpdateAnimations();
 
         //if (AudioManager.getInstance() != null)
         //    AudioManager.getInstance().Find("blocked").source.Play();
@@ -204,6 +214,7 @@ public class Player : MonoBehaviour
         //    AudioManager.getInstance().Find("blocked").source.mute = false;
         //}
         isMoving = false;
+        UpdateAnimations();
     }
 
     private bool objectCheck(Vector2 targetCell)
@@ -244,6 +255,11 @@ public class Player : MonoBehaviour
         {
             Vector2 _dir = targetCell - new Vector2(transform.position.x, transform.position.y);
             coll.GetComponent<WallButton>().InteractWithButton(_dir);
+            return false;
+        }
+        else if (coll.tag == "Exit")
+        {
+            LevelManager.Instance.OnExit();
             return false;
         }
         else
