@@ -21,6 +21,8 @@ public class CharacterCreation : MonoBehaviour
 
     [SerializeField] GameObject authenticationOverlay;
 
+    //ZET EVENTSYSTEM UIT
+
     public void SetPlayerSettings()
     {
         playerName[CurrentScreenIndex] = nameTextField[CurrentScreenIndex].text;
@@ -72,6 +74,7 @@ public class CharacterCreation : MonoBehaviour
     public void StartAuthentication()
     {
         authenticationOverlay.SetActive(true);
+        GameObject.Find("EventSystem").SetActive(false);
     }
 
 

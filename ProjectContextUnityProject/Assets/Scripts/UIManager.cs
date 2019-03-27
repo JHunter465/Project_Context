@@ -34,8 +34,14 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetButtonDown("XboxA") && LevelManager.Instance.CurrentLevel == 0)
+        {
+            CloseWindow(CharacterCreationWindow);
+            LevelManager.Instance.NextLevel();
+        }
+
 #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q))
         {
             CloseWindow(CharacterCreationWindow);
             LevelManager.Instance.NextLevel();
