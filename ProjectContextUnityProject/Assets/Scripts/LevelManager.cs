@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -12,6 +13,16 @@ public class LevelManager : MonoBehaviour
 
     public List<string> SceneList;
 
+    public Color[] HairColor = new Color[2];
+    public Color[] HeadColor = new Color[2];
+    public Color[] ShirtColor = new Color[2];
+
+    public SpriteRenderer HairSprite;
+    public SpriteRenderer HeadSprite;
+    public SpriteRenderer ShirtSprite;
+
+    public string[] PlayerName = new string[2];
+
     private void Awake()
     {
         if (Instance == null)
@@ -20,6 +31,22 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(Instance);
+    }
+
+    public void UpdatePlayerColors()
+    {
+        if (CurrentLevel < 2)
+        {
+            HeadSprite.color = HeadColor[1];
+            HairSprite.color = HairColor[1];
+            ShirtSprite.color = ShirtColor[1];
+        }
+        else
+        {
+            HeadSprite.color = HeadColor[0];
+            HairSprite.color = HairColor[0];
+            ShirtSprite.color = ShirtColor[0];
+        }
     }
 
     public void OnExit()
@@ -38,15 +65,4 @@ public class LevelManager : MonoBehaviour
         isSwitching = false;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

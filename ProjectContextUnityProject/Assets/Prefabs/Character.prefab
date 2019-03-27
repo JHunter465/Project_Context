@@ -427,10 +427,14 @@ MonoBehaviour:
   wallTilemap: {fileID: 0}
   slipperyTilemap: {fileID: 0}
   isMoving: 0
+  isSliding: 0
   onCooldown: 0
   moveTime: 0.2
   renderParent: {fileID: 859527867141908863}
   shoulderAnimator: {fileID: 1125049551}
+  HairSprite: {fileID: 1727610426}
+  HeadSprite: {fileID: 1236108041}
+  ShirtSprite: {fileID: 1535160333}
 --- !u!1 &859527867141908863
 GameObject:
   m_ObjectHideFlags: 0

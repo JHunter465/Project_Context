@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject renderParent;
     [SerializeField] Animator shoulderAnimator;
 
+    [SerializeField] SpriteRenderer HairSprite;
+    [SerializeField] SpriteRenderer HeadSprite;
+    [SerializeField] SpriteRenderer ShirtSprite;
+
     private Vector3 startingPosition;
 
     Coroutine moveRoutine;
@@ -24,6 +29,12 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         startingPosition = transform.position;
+
+        LevelManager.Instance.HairSprite = HairSprite;
+        LevelManager.Instance.HeadSprite = HeadSprite;
+        LevelManager.Instance.ShirtSprite = ShirtSprite;
+
+        LevelManager.Instance.UpdatePlayerColors();
     }
 
     private void Update()
