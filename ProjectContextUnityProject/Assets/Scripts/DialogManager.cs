@@ -19,12 +19,12 @@ public class DialogManager : MonoBehaviour
 
     void Start()
     {
+        RPGTalk.variables[0].variableValue = LevelManager.Instance.CurrentLevel < 6 ? LevelManager.Instance.PlayerName[1] : LevelManager.Instance.PlayerName[0];
         eventSystem = GameObject.Find("EventSystem");
         Invoke("SetLinesPositions", 1);
         RPGTalk.OnMadeChoice += OnMadeChoice;
         player.canMove = false;
-        
-        //RPGTalk.NewTalk(RPGTalk.lineToStart, RPGTalk.lineToBreak);
+        RPGTalk.NewTalk(RPGTalk.lineToStart, RPGTalk.lineToBreak);
     }
 
     private void Update()
@@ -55,6 +55,7 @@ public class DialogManager : MonoBehaviour
     public void OpenAuthenticationWindow()
     {
         UIManager.Instance.OpenWindow(authenticationWindow);
+        RPGTalk.enabled = false;
         eventSystem.SetActive(false);
     }
 
@@ -91,10 +92,64 @@ public class DialogManager : MonoBehaviour
                 ReturnMovement();
                 break;
             case 8:
-                //OpenAnswerWindow();
+                OpenAuthenticationWindow();
                 break;
             case 9:
-                //OpenAnswerWindow();
+                ReturnMovement();
+                break;
+            case 10:
+                OpenAnswerWindow();
+                break;
+            case 11:
+                ReturnMovement();
+                break;
+            case 12:
+                OpenAnswerWindow();
+                break;
+            case 13:
+                ReturnMovement();
+                break;
+            case 14:
+                OpenAnswerWindow();
+                break;
+            case 15:
+                BeginNextDialog();
+                break;
+            case 16:
+                OpenAuthenticationWindow();
+                break;
+            case 17:
+                ReturnMovement();
+                break;
+            case 18:
+                OpenAnswerWindow();
+                break;
+            case 19:
+                BeginNextDialog();
+                break;
+            case 20:
+                OpenAnswerWindow();
+                break;
+            case 21:
+                ReturnMovement();
+                break;
+            case 22:
+                OpenAnswerWindow();
+                break;
+            case 23:
+                BeginNextDialog();
+                break;
+            case 24:
+                OpenAuthenticationWindow();
+                break;
+            case 25:
+                ReturnMovement();
+                break;
+            case 26:
+                OpenAnswerWindow();
+                break;
+            case 27:
+                ReturnMovement();
                 break;
         }
     }

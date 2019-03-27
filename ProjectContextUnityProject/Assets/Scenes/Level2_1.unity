@@ -5061,7 +5061,7 @@ PrefabInstance:
     - target: {fileID: 4713839088058007220, guid: ab43a41816050134795246dc0ca729d0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4713839088058007220, guid: ab43a41816050134795246dc0ca729d0,
         type: 3}
@@ -5156,6 +5156,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 933707454}
+    - target: {fileID: 711070701, guid: ab43a41816050134795246dc0ca729d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 343
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024681275, guid: ab43a41816050134795246dc0ca729d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 343
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab43a41816050134795246dc0ca729d0, type: 3}
 --- !u!1 &888130377 stripped
@@ -5256,7 +5264,7 @@ PrefabInstance:
     - target: {fileID: 353465774350686106, guid: 56b69deb9e54cee469f826c5f704bab1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 353465774350686106, guid: 56b69deb9e54cee469f826c5f704bab1,
         type: 3}
@@ -5346,12 +5354,17 @@ PrefabInstance:
     - target: {fileID: 353465774350686101, guid: 56b69deb9e54cee469f826c5f704bab1,
         type: 3}
       propertyPath: lineToStart
-      value: cutscene6_start
+      value: cutscene8_start
       objectReference: {fileID: 0}
     - target: {fileID: 353465774350686101, guid: 56b69deb9e54cee469f826c5f704bab1,
         type: 3}
       propertyPath: lineToBreak
-      value: cutscene6_end
+      value: cutscene8_end
+      objectReference: {fileID: 0}
+    - target: {fileID: 353465774350686101, guid: 56b69deb9e54cee469f826c5f704bab1,
+        type: 3}
+      propertyPath: variables.Array.data[0].variableValue
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2869847685565002628, guid: 56b69deb9e54cee469f826c5f704bab1,
         type: 3}
@@ -5371,7 +5384,7 @@ PrefabInstance:
     - target: {fileID: 2869847685565002628, guid: 56b69deb9e54cee469f826c5f704bab1,
         type: 3}
       propertyPath: currentDialog
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b69deb9e54cee469f826c5f704bab1, type: 3}
@@ -5745,7 +5758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6545,7 +6558,7 @@ RectTransform:
   m_Children:
   - {fileID: 1009596673}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6676,8 +6689,8 @@ MonoBehaviour:
   HeadSprite: {fileID: 0}
   ShirtSprite: {fileID: 0}
   PlayerName:
-  - 
-  - 
+  - Barteljaap
+  - JeMoeder
 --- !u!4 &1660267773
 Transform:
   m_ObjectHideFlags: 0

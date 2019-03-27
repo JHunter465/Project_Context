@@ -45,6 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RPGTalk: {fileID: 353465774350686101}
+  authenticationWindow: {fileID: 0}
+  answerWindow: {fileID: 0}
+  eventSystem: {fileID: 0}
+  player: {fileID: 0}
+  currentDialog: 1
 --- !u!114 &353465774350686101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +114,7 @@ MonoBehaviour:
   actualTextSpeed: 0
   isPlaying: 0
   isAnimating: 0
-  choicePrefab: {fileID: 2203312943629813576, guid: 2d8f2200399298e40b24e809134cc824,
+  choicePrefab: {fileID: 2203312943629813576, guid: 4cff6ea5c2879a94b8be121bc4bf9a63,
     type: 3}
   choicesParent: {fileID: 0}
   expressing:

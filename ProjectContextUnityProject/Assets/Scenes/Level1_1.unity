@@ -824,8 +824,8 @@ MonoBehaviour:
   HeadSprite: {fileID: 0}
   ShirtSprite: {fileID: 0}
   PlayerName:
-  - 
-  - 
+  - Barteljaap
+  - EchteNaam
 --- !u!4 &785740650
 Transform:
   m_ObjectHideFlags: 0
@@ -5279,6 +5279,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 353465774363878022}
+    - target: {fileID: 711070701, guid: ab43a41816050134795246dc0ca729d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 343
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024681275, guid: ab43a41816050134795246dc0ca729d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 343
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab43a41816050134795246dc0ca729d0, type: 3}
 --- !u!1 &1326776082 stripped
