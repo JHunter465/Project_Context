@@ -11,7 +11,7 @@ Floris: [question=0]Oké, boem, eerst vraag ik je even om je geslacht voordat je
 [choice]Nou, liever niet.
 [title=cutscene2_end]
 [title=cutscene3_start]
-Floris: Oké, als het goed is gaat de deur nu open!
+Floris: Oké, nu kan je beginnen!
 [title=cutscene3_end]
 [title=cutscene4_start]
 Floris: Floris: [question=1]Sup, snelle vraag, wil je een antwoord geven op wat je geboortedatum is?

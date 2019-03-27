@@ -4684,7 +4684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99643f10e12e8e946bdb9a46b16b62a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentLevel: 6
+  CurrentLevel: 8
   SceneList: []
   HairColor:
   - {r: 1, g: 1, b: 1, a: 1}
@@ -6836,6 +6836,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1339907569, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1535160332, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -6855,10 +6859,6 @@ PrefabInstance:
     - target: {fileID: 1535160332, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339907569, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 450c142a9b4ee5344a22bdf19198d65d, type: 3}

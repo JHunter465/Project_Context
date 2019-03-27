@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public Tilemap wallTilemap;
     public Tilemap slipperyTilemap;
 
+    public bool canMove = true;
+
     public bool isMoving = false;
     public bool isSliding = false;
     public bool onCooldown = false;
@@ -42,8 +44,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //We do nothing if the player is still moving.
-        if (isMoving || onCooldown) return; //|| onExit) return;
+        //We do nothing if the player is still moving or isnt allowed to move.
+        if (isMoving || onCooldown || !canMove) return; //|| onExit) return;
 
         //To store move directions.
         int horizontal = 0;

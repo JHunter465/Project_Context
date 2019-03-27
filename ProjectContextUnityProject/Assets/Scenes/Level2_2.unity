@@ -445,6 +445,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5421557761827329495, guid: bb5ee1153c4774345a0d1da5be9c6a90,
         type: 3}
       propertyPath: RotationAngle
@@ -474,11 +479,6 @@ PrefabInstance:
         type: 3}
       propertyPath: PingPongRotation
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb5ee1153c4774345a0d1da5be9c6a90, type: 3}
@@ -5031,6 +5031,66 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1303868194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1303868196}
+  - component: {fileID: 1303868195}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1303868195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303868194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99643f10e12e8e946bdb9a46b16b62a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentLevel: 5
+  SceneList: []
+  HairColor:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  HeadColor:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  ShirtColor:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  HairSprite: {fileID: 0}
+  HeadSprite: {fileID: 0}
+  ShirtSprite: {fileID: 0}
+  PlayerName:
+  - 
+  - 
+--- !u!4 &1303868196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303868194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1507050969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5421557761827329513, guid: bb5ee1153c4774345a0d1da5be9c6a90,
@@ -5203,6 +5263,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5421557761827329495, guid: bb5ee1153c4774345a0d1da5be9c6a90,
         type: 3}
       propertyPath: RotationAngle
@@ -5232,11 +5297,6 @@ PrefabInstance:
         type: 3}
       propertyPath: PingPongRotation
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb5ee1153c4774345a0d1da5be9c6a90, type: 3}
@@ -5622,6 +5682,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5421557761827329495, guid: bb5ee1153c4774345a0d1da5be9c6a90,
         type: 3}
       propertyPath: RotationAngle
@@ -5651,11 +5716,6 @@ PrefabInstance:
         type: 3}
       propertyPath: PingPongRotation
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb5ee1153c4774345a0d1da5be9c6a90, type: 3}
@@ -7638,6 +7698,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5421557761827329495, guid: bb5ee1153c4774345a0d1da5be9c6a90,
         type: 3}
       propertyPath: RotationAngle
@@ -7667,11 +7732,6 @@ PrefabInstance:
         type: 3}
       propertyPath: PingPongRotation
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb5ee1153c4774345a0d1da5be9c6a90, type: 3}
