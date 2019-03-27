@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
+    public GameObject FakeCharacterWindow;
     public GameObject CharacterCreationWindow;
 
     [Header("Settings: ")]
@@ -37,6 +38,7 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             CloseWindow(CharacterCreationWindow);
+            LevelManager.Instance.NextLevel();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
