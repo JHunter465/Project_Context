@@ -8901,52 +8901,52 @@ MonoBehaviour:
     OutputTextfield: {fileID: 1263103395}
   - Name: Geslacht
     Value: 
-    Inputfield: {fileID: 877687934}
-    OutputTextfield: {fileID: 1926048553}
+    Inputfield: {fileID: 773174296}
+    OutputTextfield: {fileID: 915282664}
   - Name: Geboortedatum
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 877687934}
+    OutputTextfield: {fileID: 1926048553}
   - Name: Geboorteplaats
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 707769803}
+    OutputTextfield: {fileID: 1616761514}
   - Name: Lengte
     Value: 
     Inputfield: {fileID: 90820599}
     OutputTextfield: {fileID: 1360239113}
   - Name: Email
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 797345454}
+    OutputTextfield: {fileID: 247213205}
   - Name: Adres
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 1550353007}
+    OutputTextfield: {fileID: 2071410227}
   - Name: Postcode
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 1429476077}
+    OutputTextfield: {fileID: 1700645334}
   - Name: Telefoonnummer
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 699503922}
+    OutputTextfield: {fileID: 173400893}
   - Name: Ouders
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 1245684212}
+    OutputTextfield: {fileID: 1008541115}
   - Name: Orientatie
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 35248003}
+    OutputTextfield: {fileID: 1328080457}
   - Name: Maagd
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 1598942373}
+    OutputTextfield: {fileID: 434333284}
   - Name: Partners
     Value: 
-    Inputfield: {fileID: 90820599}
-    OutputTextfield: {fileID: 1360239113}
+    Inputfield: {fileID: 561508899}
+    OutputTextfield: {fileID: 851241405}
 --- !u!4 &1135460431
 Transform:
   m_ObjectHideFlags: 0
