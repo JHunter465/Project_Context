@@ -20,7 +20,7 @@ public class ProfileManager : MonoBehaviour
     public void SetProfileData(ProfileData _profileData)
     {
         _profileData.Value = _profileData.Inputfield.text;
-        _profileData.OutputTextfield.text = _profileData.Name + ": " + _profileData.Value;
+        _profileData.OutputTextfield.text = _profileData.Value;
     }
 
     public void SetProfileColor(TMP_Dropdown _dropdown)
