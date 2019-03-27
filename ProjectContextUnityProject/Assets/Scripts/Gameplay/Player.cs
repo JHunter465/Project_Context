@@ -2,20 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public Tilemap floorTilemap;
     public Tilemap wallTilemap;
+    public Tilemap slipperyTilemap;
+
+    public bool canMove = true;
 
     public bool isMoving = false;
+    public bool isSliding = false;
     public bool onCooldown = false;
-    private float moveTime = 0.1f;
+    public float moveTime = 0.2f;
+
+    [SerializeField] GameObject renderParent;
+    [SerializeField] Animator shoulderAnimator;
+
+    [SerializeField] SpriteRenderer HairSprite;
+    [SerializeField] SpriteRenderer HeadSprite;
+    [SerializeField] SpriteRenderer ShirtSprite;
+
+    private Vector3 startingPosition;
+
+    Coroutine moveRoutine;
+
+    private void Awake()
+    {
+        startingPosition = transform.position;
+    }
+
+    private void Start()
+    {
+        LevelManager.Instance.HairSprite = HairSprite;
+        LevelManager.Instance.HeadSprite = HeadSprite;
+        LevelManager.Instance.ShirtSprite = ShirtSprite;
+
+        LevelManager.Instance.UpdatePlayerColors();
+    }
 
     private void Update()
     {
-        //We do nothing if the player is still moving.
-        if (isMoving || onCooldown) return; //|| onExit) return;
+        //We do nothing if the player is still moving or isnt allowed to move.
+        if (isMoving || onCooldown || !canMove) return; //|| onExit) return;
 
         //To store move directions.
         int horizontal = 0;
@@ -31,8 +61,40 @@ public class Player : MonoBehaviour
         if (horizontal != 0 || vertical != 0)
         {
             StartCoroutine(actionCooldown(0.1f));
+            ChangeRotation(horizontal, vertical);
             Move(horizontal, vertical);
         }
+    }
+
+    public void TeleportToStart()
+    {
+        transform.position = startingPosition;
+        if (moveRoutine != null) StopCoroutine(moveRoutine);
+        isMoving = false;
+        isSliding = false;
+        UpdateAnimations();
+    }
+
+    void UpdateAnimations()
+    {
+        if (shoulderAnimator != null)
+        {
+            shoulderAnimator.SetBool("IsMoving", isMoving);
+            shoulderAnimator.SetBool("IsSliding", isSliding);
+        }
+
+    }
+
+    private void ChangeRotation(int xDir, int yDir)
+    {
+        if (xDir < 0)
+            renderParent.transform.localRotation = Quaternion.Euler(Vector3.forward * 90);
+        else if (xDir > 0)
+            renderParent.transform.localRotation = Quaternion.Euler(Vector3.forward * 270);
+        else if (yDir < 0)
+            renderParent.transform.localRotation = Quaternion.Euler(Vector3.forward * 180);
+        else if (yDir > 0)
+            renderParent.transform.localRotation = Quaternion.Euler(Vector3.zero);
     }
 
     private void Move(int xDir, int yDir)
@@ -44,23 +106,36 @@ public class Player : MonoBehaviour
         bool isOnGround = getCell(floorTilemap, startCell) != null; //If the player is on the ground
         bool hasGroundTile = getCell(floorTilemap, targetCell) != null; //If target Tile has a ground
         bool hasObstacleTile = getCell(wallTilemap, targetCell) != null; //if target Tile has an obstacle
+        bool hasSlipperyTile = getCell(slipperyTilemap, targetCell) != null; //if target Tile is slippery
 
 
         //If the front tile is a walkable ground tile, the player moves here.
         if (!hasObstacleTile)
         {
-            if (doorCheck(targetCell))
-                StartCoroutine(SmoothMovement(targetCell));
+            if (objectCheck(targetCell))
+                StartSmoothMovementRoutine(targetCell, hasSlipperyTile);
             else
-                StartCoroutine(BlockedMovement(targetCell));
+                StartBlockedMovementRoutine(targetCell);
         }
 
-        else
-            StartCoroutine(BlockedMovement(targetCell));
+        //else
+        //StartBlockedMovementRoutine(targetCell);
 
-        if (!isMoving)
-            StartCoroutine(BlockedMovement(targetCell));
+        //if (!isMoving)
+        //tartBlockedMovementRoutine(targetCell);
 
+    }
+
+    void StartSmoothMovementRoutine(Vector3 end, bool isSlippery = false)
+    {
+        if (moveRoutine != null) StopCoroutine(moveRoutine);
+        moveRoutine = StartCoroutine(SmoothMovement(end, isSlippery));
+    }
+
+    void StartBlockedMovementRoutine(Vector3 end)
+    {
+        if (moveRoutine != null) StopCoroutine(moveRoutine);
+        moveRoutine = StartCoroutine(BlockedMovement(end));
     }
 
     private IEnumerator actionCooldown(float cooldown)
@@ -77,11 +152,15 @@ public class Player : MonoBehaviour
         onCooldown = false;
     }
 
-    private IEnumerator SmoothMovement(Vector3 end)
+    private IEnumerator SmoothMovement(Vector3 end, bool isSlippery = false)
     {
         //while (isMoving) yield return null;
 
+        Vector3 _start = transform.position;
+
         isMoving = true;
+        isSliding = isSlippery;
+        UpdateAnimations();
 
         //Play movement sound
         //if (walkingSound != null)
@@ -106,6 +185,14 @@ public class Player : MonoBehaviour
         //    walkingSound.loop = false;
 
         isMoving = false;
+        isSliding = false;
+        UpdateAnimations();
+
+        if (isSlippery)
+        {
+            Vector3 _newPos = end - _start;
+            Move((int)_newPos.x, (int)_newPos.y);
+        }
     }
 
     //Blocked animation
@@ -114,7 +201,7 @@ public class Player : MonoBehaviour
         //while (isMoving) yield return null;
 
         isMoving = true;
-
+        UpdateAnimations();
 
         //if (AudioManager.getInstance() != null)
         //    AudioManager.getInstance().Find("blocked").source.Play();
@@ -151,9 +238,10 @@ public class Player : MonoBehaviour
         //    AudioManager.getInstance().Find("blocked").source.mute = false;
         //}
         isMoving = false;
+        UpdateAnimations();
     }
 
-    private bool doorCheck(Vector2 targetCell)
+    private bool objectCheck(Vector2 targetCell)
     {
         Collider2D coll = whatsThere(targetCell);
 
@@ -185,6 +273,17 @@ public class Player : MonoBehaviour
             Lever lever = coll.gameObject.GetComponent<Lever>();
             lever.operate();
             //We operate the lever, but can't move there, so we return false;
+            return false;
+        }
+        else if (coll.tag == "WallButton")
+        {
+            Vector2 _dir = targetCell - new Vector2(transform.position.x, transform.position.y);
+            coll.GetComponent<WallButton>().InteractWithButton(_dir);
+            return false;
+        }
+        else if (coll.tag == "Exit")
+        {
+            LevelManager.Instance.OnExit();
             return false;
         }
         else

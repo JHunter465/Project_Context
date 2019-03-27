@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Lever
   - LeveredDoor
+  - WallButton
+  - Exit
   layers:
   - Default
   - TransparentFX
