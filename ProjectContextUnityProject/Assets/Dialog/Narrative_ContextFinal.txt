@@ -1,0 +1,168 @@
+﻿[title=cutscene1_start]
+Floris: Goooeeeeeedenmorgen! Ik hoop dat je lekkere verfrissende week achter je hebt, geen zorgen, die lekkere verzuurde spieren hoeven nog maar één opdrachtje te voltooien. 
+Floris: Klinkt goed hé, welkom bij de legendarische, de befaamde, de geweldige MalLOODSe-run. 
+Floris: Pas als je deze opdracht voltooid ben je een echt lid, een deel van U.S. Ardiolus, een deel van ons broederschap. Betreed nu de loods en herreis hierna als voltallig Ardioos. 
+Floris: Ik houd gewoon contact met je via de telefoon daarbinnen by the way, dus maak je geen zorgen, niet dat ik me bij jou kan voorstellen dat je het niet haalt. Dus, vooruit, ga ervoor!
+[title=cutscene1_end]
+[title=cutscene2_start]
+Floris: Heeeyo! Hier ben ik dan, lekker chill op de telefoon. We gebruiken deze MalLOODSe-run dus ook voor het maken van je verenigingspasje, dus antwoord wel even eerlijk haha. 
+Floris: [question=0]Oké, boem, eerst vraag ik je even om je geslacht voordat je verder mag naar deze kamer, wil je hierop even antwoorden? 
+[choice]Uiteraard!
+[choice]Nou, liever niet.
+[title=cutscene2_end]
+[title=cutscene3_start]
+Floris: Oké, als het goed is gaat de deur nu open!
+[title=cutscene3_end]
+[title=cutscene4_start]
+Floris: Floris: [question=1]Sup, snelle vraag, wil je een antwoord geven op wat je geboortedatum is?
+[choice]Sure?
+[choice]Ehm, nee?
+[title=cutscene4_end]
+[title=cutscene5_start]
+Floris: Thanks man, ga vooral verder.
+[title=cutscene5_end]
+[title=cutscene6_start]
+Floris: Onze afdeling analytics wilt ook dat iedereen zijn geboorteplaats op zijn pasje heeft staan, ik weet ook niet helemaal waarom, maar ja, vinden ze leuk. 
+Floris: [question=2]Wil je deze dus met ons delen?
+[choice]Oké
+[choice]Nou, liever niet
+[title=cutscene6_end]
+[title=cutscene7_start]
+Floris: Chill chill chill, veel succes met deze kamer.
+[title=cutscene7_end]
+[title=cutscene8_start]
+Floris: Zozo [playerName], nu heb je dan eindelijk het punt bereikt waar we moed beginnen te krijgen dat je het gaat redden. 
+Floris: [question=3]Wil je dus even een fotootje doorsturen? dan kunnen we die mooi op je pasje plakken en zij we weer een stapje dichterbij je lidmaatschap.
+[choice]Hell yeah!
+[choice]Nou, nee.
+[title=cutscene8_end]
+[title=cutscene9_start]
+Floris: Thanks man, super zwoele blik, ik ga hem even printen.
+[title=cutscene9_end]
+[title=cutscene10_start]
+Floris: Zo hé, lekker snel bezig [playerName], wil je een recordtijd neerzetten ofzo. Weet je nog dat ik het had over dat analyticsteam?
+Floris: Nou, ze willen dus ook je lengte weten, we gaan namelijk onze bar uitbreiden, maar weten nog niet wat een chille hoogte is voor het plafond. 
+Floris: [question=4]Wil je dus je lengte delen?
+[choice]Lijkt me wel handig dan
+[choice]Nah
+[title=cutscene10_end]
+[title=cutscene11_start]
+Floris: Chill, zo zorgen we ervoor dat niemand z’n hoofd stoot na de verbouwing hahaha.
+[title=cutscene11_end]
+[title=cutscene12_start]
+Floris: Stel je voor, het is een gezellige avond, je hebt wat te vieren en je bent dus uiteraard de hele nacht bij je mede Ardiozen. 
+Floris: Tijdens deze avond wordt het alleen wel een beetje té gezellig, gebeurt vaker dan je denkt, totaal begrijpelijk. Maar, op de deze avond verlies je je pasje. 
+Floris: [question=5]Wij, als bestuur moeten je dan kunnen bereiken en hebben hiervoor je Email nodig, wil je die delen?
+[choice]Haha wel nodig
+[choice]Liever niet
+[title=cutscene12_end]
+[title=cutscene13_start]
+Floris: Cool cool, we sturen je, als het je lukt om daadwerkelijk lid te worden, een mailtje ter conformatie.
+[title=cutscene13_end]
+[title=cutscene14_start]
+Floris: [playerName], heb je al van ons drie-maandelijks verenigingsblad gehoord, de beruchte Kordaat. Hier komen allemaal sappige nieuwtjes in te staan, roddels en nog veel meer leuks in te staan. 
+Floris: [question=6]We hebben alleen dus wel je woonadres nodig, kan je de even opgeven?
+[choice]Sure
+[choice]Denk het niet
+[title=cutscene14_end]
+[title=cutscene15_start]
+Floris: Cool, cool, hier alvast een sneakpreview, Annelène heeft laatst met Allaard geregeld!
+[title=cutscene15_end]
+[title=cutscene16_start]
+Floris: Fucking chill dat je tot hier bent gekomen, je bent nu op de helft! Vanaf dit punt kunnen we je niet meer volgen, want je gaat de vriezer in. 
+Floris: [question=7]Kan je dus even je camera aanzetten, zodat we je kunnen zien, dan weten we dat alles goed gaat!
+[choice]Geen probleem
+[choice]Dat doe ik niet
+[title=cutscene16_end]
+[title=cutscene17_start]
+Floris: Wow, nice, super chill, nu kan je verder!
+[title=cutscene17_end]
+[title=cutscene18_start]
+Floris: [question=8]Nog een klein dingetje voor de epische Kordaat, we hebben je postcode nodig. Ale je het zegt dan komt er nog een kleine preview, omdat je het zo goed doet!
+[choice]Oké, komt ie
+[choice]Die deel ik niet
+[title=cutscene18_end]
+[title=cutscene19_start]
+Floris: Niiiice, oké, ik zeg maar 4 dingen. Stephan, Elianne, bram, bosjes.
+[title=cutscene19_end]
+[title=cutscene20_start]
+Floris: [question=9]Chill bezig [playerName], ik heb even je thuis telefoonnummer nodig, kan je die even zeggen?
+[choice]Yes
+[choice]Ehm, nee!
+[title=cutscene20_end]
+[title=cutscene21_start]
+Floris: Thanks man, dan weten we ook weer met wie we contact kunnen opnemen als er wat fout gaat!
+[title=cutscene21_end]
+[title=cutscene22_start]
+Floris: Hey, ben jij misschien ook zo’n geluksvogel die twee keer z’n verjaardag mag vieren omdat je ouders gescheiden zijn? Ik dus niet, heb het eigenlijk altijd al willen meemaken, maar ja. 
+Floris: [question=10]Zijn jouw ouders dus eigenlijk gescheiden?
+[choice]Haha nice
+[choice]Dit zeg ik liever niet
+[title=cutscene22_end]
+[title=cutscene23_start]
+Floris: Ik heb eigenlijk geen idee waar deze vraag heen ging, maar ja, 't gaat op je pasje.
+[title=cutscene23_end]
+[title=cutscene24_start]
+Floris: YO YO YO!!!! Motherfucking [playerName] man, je gaat zo goed, legit bezig met een nieuw record. 
+Floris: [question=11]Aan mij werd gevraagd of we je camera nu kunnen livestreamen, zodat de rest van de vereniging kan meegenieten van hoe hard je Marcus z’n oude record verbreekt. Mag ik dit doen?
+[choice]Niice, jaaa!!
+[choice]Nee, wtf
+[title=cutscene24_end]
+[title=cutscene25_start]
+Floris: Yoooo, lachen man, al je toekomstige medeleden kijken mee!
+[title=cutscene25_end]
+[title=cutscene26_start]
+Floris: Chill, de laatste etappe ben je al aan bezig nu! Fun fact, soms organiseren we borrels, speciaal gemaakt om te regelen.
+Floris: Hiervoor is het wel even chill om natuurlijk te weten of je op die malse hertjes valt of dat je jacht maakt op de grote wolven. 
+Floris: [question=12]Of allebei natuurlijk. Kan je dit dus zeggen in ieder geval?
+[choice]Natuurlijk
+[choice]Nou, nee
+[title=cutscene26_end]
+[title=cutscene27_start]
+Floris: Niiice, je zult in no-time lekker gaan regelen [playerName]!
+[title=cutscene27_end]
+[title=cutscene28_start]
+Floris: [question=13]Dus hoe zit het met je maagdelijkheid?
+[choice]Dat zal ik je eens zeggen
+[choice]Dat deel ik niet
+[title=cutscene28_end]
+[title=cutscene29_start]
+Floris: Oké, oké, respect!
+[title=cutscene29_end]
+[title=cutscene30_start]
+Floris: Wooow, je bent er bijna, het gaat echt super goed, ik wist wel dat je het ging redden! 
+Floris: [question=14]Nog een klein dingetje en dan kan je weer verder, hoeveel sekspartners heb je eigenlijk gehad, zou je dat even willen zeggen?
+[choice]Sure
+[choice]Haha nee
+[title=cutscene30_end]
+[title=cutscene31_start]
+Floris: Alles chill
+[title=cutscene31_end]
+[title=cutscene32_start]
+Floris: [question=15]EEEEEYYYOOOO [playerName], je hebt Marcus echt ziek hard verslagen. Mogen we je informatie even delen met wat andere partijen? Dan kunnen we hier samen echt ZIEK veel geld aan verdienen! Super niiice!
+[choice]Kom maar door!
+[choice]Dit gaat te ver.
+[title=cutscene32_end]
+[title=cutscene33_start]
+Floris: Yo, [playerName], we hebben deze info legit nodig, zonder at kan je geen lid worden, dat zou super jammer zijn!
+Floris: [question=16]Wil je alsnog wel antwoorden?
+[choice]Oké dan.
+[choice]Echt niet.
+[title=cutscene33_end]
+[title=cutscene34_start]
+Floris: Serieus gast, je kan zonder deze vraag te antwoorden niet verder, dan word je dus nooit lid! Super kut zou dat zijn!
+Floris: [question=16]Kan je alsjeblieft wel antwoorden?
+[choice]Oké dan.
+[choice]Echt niet.
+[title=cutscene34_end]
+[title=cutscene35_start]
+Floris: [playerName], onze persoon van deze ontgroening met de meeste potentie, dat kan je toch niet zomaar opgeven?
+Floris: [question=17]Legit, zonder deze info kunnnen we niet verder, wil je toch nog even antwoorden?
+[choice]Oké dan.
+[choice]Echt niet.
+[title=cutscene35_end]
+[title=cutscene36_start]
+Floris: [question=18]Weet je echt heeel zeker dat je deze kans gaat opgeven?
+[choice]Ja
+[choice]Nog niet
+[title=cutscene36_end]

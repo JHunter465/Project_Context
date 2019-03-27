@@ -29,7 +29,10 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         startingPosition = transform.position;
+    }
 
+    private void Start()
+    {
         LevelManager.Instance.HairSprite = HairSprite;
         LevelManager.Instance.HeadSprite = HeadSprite;
         LevelManager.Instance.ShirtSprite = ShirtSprite;

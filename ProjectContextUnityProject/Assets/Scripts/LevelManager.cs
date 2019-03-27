@@ -65,4 +65,9 @@ public class LevelManager : MonoBehaviour
         isSwitching = false;
     }
 
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(CurrentLevel, LoadSceneMode.Single);
+        isSwitching = false;
+    }
 }
