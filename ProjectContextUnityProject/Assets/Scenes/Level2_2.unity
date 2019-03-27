@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8878d52113175af45a3dae30b4b939cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FakeCharacterWindow: {fileID: 0}
   CharacterCreationWindow: {fileID: 0}
   fadeImage: {fileID: 1009596674}
   FadeDelay: 0
@@ -444,11 +445,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
-    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5421557761827329495, guid: bb5ee1153c4774345a0d1da5be9c6a90,
         type: 3}
       propertyPath: RotationAngle
@@ -478,6 +474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PingPongRotation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb5ee1153c4774345a0d1da5be9c6a90, type: 3}
@@ -5202,11 +5203,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5421557761827329495, guid: bb5ee1153c4774345a0d1da5be9c6a90,
         type: 3}
       propertyPath: RotationAngle
@@ -5236,6 +5232,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PingPongRotation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb5ee1153c4774345a0d1da5be9c6a90, type: 3}
@@ -5621,11 +5622,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5421557761827329495, guid: bb5ee1153c4774345a0d1da5be9c6a90,
         type: 3}
       propertyPath: RotationAngle
@@ -5655,6 +5651,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PingPongRotation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb5ee1153c4774345a0d1da5be9c6a90, type: 3}
@@ -6918,6 +6919,24 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 15, y: 8, z: 0}
+    second:
+      m_TileIndex: 26
+      m_TileSpriteIndex: 26
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 10
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 17, y: 8, z: 0}
+    second:
+      m_TileIndex: 25
+      m_TileSpriteIndex: 25
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 10
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 18, y: 8, z: 0}
     second:
       m_TileIndex: 14
@@ -7294,6 +7313,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 7fcae2d00f8cc034d834bf49f2746516, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 0fef9cc534b80b348ad058756d82a01e, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 48d3760ade0a2e4469484436dfd3a80d, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: e6008ab5d4ba111418c0eb8846d96fc8, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: 21300014, guid: dc70483d4ff3fba49a0969d1412a7e95, type: 3}
@@ -7345,8 +7368,12 @@ Tilemap:
     m_Data: {fileID: 21300018, guid: b513ddc6abbadea41bf64c0fdf70ee9d, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 21300006, guid: b513ddc6abbadea41bf64c0fdf70ee9d, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300090, guid: 17ff07b3d80274a4faf219496e648e0e, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300088, guid: 17ff07b3d80274a4faf219496e648e0e, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 158
+  - m_RefCount: 160
     m_Data:
       e00: 1
       e01: 0
@@ -7385,7 +7412,7 @@ Tilemap:
     m_Data: {r: 1.1e-44, g: 1.1e-44, b: 1.1e-44, a: 1.1e-44}
   - m_RefCount: 0
     m_Data: {r: 1.3e-44, g: 1.3e-44, b: 1.3e-44, a: 1.3e-44}
-  - m_RefCount: 158
+  - m_RefCount: 160
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7611,11 +7638,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5421557761827329495, guid: bb5ee1153c4774345a0d1da5be9c6a90,
         type: 3}
       propertyPath: RotationAngle
@@ -7645,6 +7667,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PingPongRotation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421557761827329516, guid: bb5ee1153c4774345a0d1da5be9c6a90,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb5ee1153c4774345a0d1da5be9c6a90, type: 3}
